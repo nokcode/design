@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1">    
+    <title>Sedeapp</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <div id="app">
+        <!--#include file="includes/navigation.html"-->          
+        <div>
+            <!--#set var="suporte" value="active"-->
+            <!--#include file="includes/header.html"-->
+            <main>
+                <section id="support-closed-tickets">
+                    <h3>Suporte</h3>
+                    <nav role="tablist">
+                        <a href="tickets-em-andamento.html" role="tab">Em andamento</a>
+                        <a href="tickets-concluidos.html" role="tab" class="active">Concluído</a>
+                    </nav>
+                    <table>
+                        <colgroup>
+                            <col class='min' />
+                            <col />
+                            <col class='min' />
+                            <col class='min' />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Protocolo</th>
+                                <th>Assunto</th>
+                                <th>Atendente</th>
+                                <th>Última atualização</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SSG0503200100</td>
+                                <td>
+                                    Alguém tirou o fio do meu teclado.<br>
+                                    <span class="author">por Zé Coquinho</span>
+                                </td>
+                                <td>Camila Oliveira</td>
+                                <td>2022-05-03 20:12:34</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

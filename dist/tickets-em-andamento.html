@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width; initial-scale=1" />
+    <title>Sedeapp</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+</head>
+<body>
+    <div id="app">
+        <!--#include file="includes/navigation.html"-->        
+        <div>
+            <!--#set var="suporte" value="active"-->
+            <!--#include file="includes/header.html"-->
+            <main>
+                <section id="support-open-tickets">
+                    <h3>Suporte</h3>
+                    <nav role="tablist">
+                        <a href="tickets-em-andamento.html" role="tab" class="active">Em andamento</a>
+                        <a href="tickets-concluidos.html" role="tab">Concluído</a>
+                    </nav>
+                    <table>
+                        <colgroup>
+                            <col class='min' />
+                            <col />
+                            <col class='min' />
+                            <col class='min' />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th>Protocolo</th>
+                                <th>Assunto</th>
+                                <th>Atendente</th>
+                                <th>Última atualização</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>SSG0503210801</td>
+                                <td>
+                                    Eu não acredito que vocês criaram meu usuário tão rápido!<br>
+                                    <span class="author">por João Incrédulo</span>
+                                </td>
+                                <td>Camila Oliveira</td>
+                                <td>2022-05-03 21:27:38</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

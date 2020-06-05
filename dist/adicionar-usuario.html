@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>  
+    <title>Usuários (Sede)</title>
+    <!--#include file="includes/head.html"-->
+</head>
+<body>
+    <div id="app">
+        <!--#set var="controle-de-acesso" value="active"-->
+        <!--#include file="includes/navigation.html"-->        
+        <div>
+            <!--#include file="includes/header.html"-->
+            <main>
+                <section id="users">
+                    <h3>Minha Conta</h3>
+                    <!--#set var="usuarios" value="active"-->
+                    <!--#include file="includes/controle-de-acesso-tabs.html"-->
+                    <a href="adicionar-usuario.html" class="new">Adicionar</a>
+                    <!--#include file="includes/lista-de-usuarios.html"-->
+                </section>
+                <div class="overlay">
+                    <section id="add-user">
+                        <h3>Adicionar usuário</h3>
+                    </section>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

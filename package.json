@@ -1,0 +1,15 @@
+{
+    "name": "@sedeapp/design",
+    "version": "0.1.0",
+    "private": true,
+    "license": "UNLICENSED",
+    "author": {
+        "name": "Rafael Ribeiro",
+        "email": "rafael@sedeapp.com.br",
+        "url": "https://github.com/sedeapp"
+    },
+    "devDependencies": {
+        "html-includes": "^4.3.2",
+        "stylus": "^0.54.7"
+    }
+}

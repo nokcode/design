@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Políticas (Sede)</title>
+    <!--#include file="includes/head.html"-->
+</head>
+<body>
+    <div id="app">
+        <!--#set var="controle-de-acesso" value="active"-->
+        <!--#include file="includes/navigation.html"-->       
+        <div>
+            <!--#include file="includes/header.html"-->  
+            <main>
+                <section id="politicas">
+                    <h3>Minha Conta</h3>
+                    <!--#set var="politicas" value="active"-->
+                    <!--#include file="includes/controle-de-acesso-tabs.html"-->
+                    <a href="adicionar-politica.html" class="new">Adicionar</a>
+                    <!--#include file="includes/lista-de-politicas.html"-->
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

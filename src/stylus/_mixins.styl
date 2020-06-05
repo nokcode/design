@@ -1,0 +1,17 @@
+vendor(prop, args)
+    -webkit-{prop} args
+    {prop} args 
+
+mask()
+    vendor('mask', arguments)
+
+mask-replacement(width = 3.2rem, height = width)
+    display: block
+    width: width
+    height: height
+    max-width: width
+    max-height: height
+    overflow: hidden
+    text-indent: 9999rem
+    white-space: nowrap
+    cursor: pointer

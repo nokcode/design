@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Grupos (Sede)</title>
+    <!--#include file="includes/head.html"-->
+</head>
+<body>
+    <div id="app">
+        <!--#set var="controle-de-acesso" value="active"-->
+        <!--#include file="includes/navigation.html"-->        
+        <div>
+            <!--#include file="includes/header.html"-->  
+            <main>
+                <section id="groups">
+                    <h3>Minha Conta</h3>
+                    <!--#set var="grupos" value="active"-->
+                    <!--#include file="includes/controle-de-acesso-tabs.html"-->
+                    <a href="adicionar-grupos.html" class="new">Adicionar</a>
+                    <!--#include file="includes/lista-de-grupos.html"-->
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

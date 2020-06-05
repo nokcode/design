@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap')
+
+@import '_mixins.styl'
+@import '_variables.styl'
+
+*, ::before, ::after
+    box-sizing: border-box
+    font-family: 'Open Sans', sans-serif
+    font-size: 1.6rem
+    margin: 0
+    padding: 0
+    outline-color: #3c3
+    text-rendering: optimizeLegibility
+
+html
+    font-size: 62.5%
+
+body
+    background-color: $background-color
+    color: $color
+    font-size: 1.4rem
+    overflow-y: scroll
+
+#app
+    display: flex
+    > div
+        display: flex
+        flex-direction: column
+        flex: 9
+
+nav[role='navigation']
+    background-color: $nav-background-color
+    color: $nav-color
+    flex: 1
+    font-family: 'DejaVu Sans', sans-serif
+    height: 100%
+    min-height: 100vh
+    min-width: 23.04rem
+    text-align: center
+    width: 23.04rem
+    h1
+        font-family: $nav-font-family
+        font-size: 3.8rem
+        font-weight: 300
+        padding: 1.2rem 0 0
+    h2 
+        background: alpha(#000, .6)
+        border-radius: .5rem
+        display: inline-block
+        font-size: 1rem
+        font-weight: 300
+        letter-spacing: .1rem
+        margin-bottom: 1.2rem
+        min-width:10rem
+        padding: .3rem 1rem .2rem
+        text-transform: uppercase
+    a:any-link
+        display: block
+        background-color: $nav-item-background-color
+        border-top: $nav-border
+        color: $nav-item-color
+        font-family: $nav-font-family
+        font-size: 1.6rem
+        font-weight: 500
+        padding: 1.2rem 3rem
+        text-align: left
+        text-decoration: none
+        &:hover
+            background: $nav-item-hover-background-color
+            color: $nav-item-hover-color
+            transition: all 600ms cubic-bezier(.4, 0, .2, 1);
+        &:last-child
+            border-bottom: $nav-border
+        &.active
+            background: $nav-item-active-background-color
+            color: $nav-item-active-color
+            position: relative
+            &::after
+                content: ' '
+                border-top: 2.1rem solid transparent
+                border-right: 2rem solid $background-color
+                border-bottom: 2.1rem solid transparent
+                display: block
+                position: absolute
+                right: 0
+                top: 0
+                width: 2rem
+
+nav[role='tablist']
+    margin: 1.4rem 0
+    padding: 0 0 .7rem
+    border-bottom: .1rem solid #ccc
+    a
+        &:any-link
+            color: $tablist-item-color
+            padding: 0 1.4rem .6rem
+            text-decoration: none
+        &:hover
+            color: $tablist-item-hover-color
+        &.active
+            border-bottom: .2rem solid $tablist-item-active-color
+            color: $tablist-item-active-color
+
+header
+    align-items: center
+    background-color: $header-background-color
+    box-shadow: $header-box-shadow
+    color: $header-color
+    display: flex
+    flex-wrap: nowrap
+    padding: 0 3rem
+    height: 6.9rem
+    min-height: 6.9rem
+    width: 100%
+    button
+        mask-replacement()
+        margin:0 3rem 0 0
+        flex: 1
+    button:first-child
+        mask: url(/assets/bars-solid.svg) no-repeat 50% 50%
+        background-color: #999
+        &:hover
+            background-color: #000
+    label
+        flex-grow: 7
+        input
+            padding: .5rem
+            width: 100%
+    a
+        flex-grow: 1
+        mask-replacement(2.4rem)
+        margin: 0 0 0 3rem
+        &:first-of-type
+            background-color: $header-comments-color
+            flex-grow: 1
+            mask: $header-comments-icon no-repeat 50% 50%
+            &:hover, &.active
+                mask: $header-comments-hover-icon no-repeat 50% 50%
+                background-color: $header-comments-hover-color
+        &:last-of-type
+            mask: $header-bell-icon no-repeat 50% 50%
+            background-color: $header-bell-color
+            &:hover, &.active
+                mask: $header-bell-hover-icon no-repeat 50% 50%
+                background-color: $header-bell-hover-color
+
+main
+    margin: 1.5rem 3rem 0
+    h3
+        font-family: 'Roboto', sans-serif
+        font-size: 2.8rem
+        font-weight: 300
+        text-shadow: 0 0 .1rem rgba(0, 0, 0, .4)
+    hr
+        border: 0
+        border-bottom: 0.1rem solid #ccc
+        margin: 1.4rem 0
+
+section 
+    position: relative
+    a.new
+        &:any-link
+            border-radius: .5rem
+            color: #3ea1f0
+            font-size: 1.4rem
+            font-weight: bold
+            position: absolute
+            top: 4.7rem
+            right: 1.4rem
+            text-decoration: none
+            &::before
+                mask: url(/assets/plus-square-regular.svg) no-repeat 50% 50%
+                background: #3ea1f0
+                content: ' '
+                display: block
+                position: absolute
+                top: .3rem
+                left: -1.8rem
+                width: 1.4rem
+                height: 1.4rem
+        &:hover
+            &::before
+                mask: url(/assets/plus-square-solid.svg) no-repeat 50% 50%
+
+form.table-search
+    align-items: center
+    background: $table-header-background
+    border: $table-border
+    border-bottom: 0
+    display: flex
+    padding: $table-cell-padding
+    label
+        flex: 1
+        input 
+            font-size: 1.4rem
+            padding: 0.25rem
+            width: 100%
+    span 
+        color: $table-header-color
+        flex: 1
+        font-size: small
+        font-weight: bold
+        text-align: right
+
+table
+    border-collapse: collapse
+    border-spacing: 0
+    width: 100%
+    &.num-1st tr td:nth-child(1)
+        text-align: center
+    &.num-2nd tr td:nth-child(2)
+        text-align: center
+    &.num-3rd tr td:nth-child(3)
+        text-align: center
+col.min
+    width: 1%
+    white-space: nowrap
+th
+    background: $table-header-background
+    border: $table-border
+    font-family: $table-header-font-family
+    font-weight: 400
+    white-space: nowrap
+th, td
+    color: $table-header-color
+    font-size: 1.4rem
+    padding: $table-cell-padding
+    white-space: nowrap
+td
+    background-color: #fff
+    border-bottom: $table-border
+    span 
+        color: #999
+        font-size: 1.4rem
+tr
+    &:hover
+        td
+            background: #e6f3ff
+            cursor: pointer
+p
+    &.end-of-page
+        font-size: small
+        padding: 3rem 0
+        text-align: center
+
+div.overlay
+    background: alpha(#000, .7)
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    min-width: 100%
+    min-height: 100%
+    section
+        background: #fff
+        box-shadow: 0 0 .1rem alpha(#000, .4)
+        position: absolute
+        width: 42rem
+        height: 100vh
+        min-width: 20rem
+        top: 0
+        right: 0
